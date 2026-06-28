@@ -1,10 +1,10 @@
-@import url('https://googleapis.com');
+
 body{
-    background-color: #e8e0d0;
-    font-family: 'Bangers';
+    background-color: #a44113;
+    font-family: 'Bitcount Single';
 }
 #pageOne{
-    display: block;
+    display: inline-block;
 }
 .tFlexbox{
     display: flex;
@@ -13,6 +13,20 @@ body{
 #dateTime{
     justify-content: center;
     color: #7a9e6e;
+    animation:
+        fade-down 0.5s 0.4s backwards;
+}
+/*fade down animation*/
+@keyframes fade-down {
+0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+}
+
+100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
 }
 
 #quickInfo{
@@ -20,18 +34,49 @@ body{
     font-size: 19px;
     margin-top: 50px;
     color:  #7a9e6e;
+    animation:
+        fade-down 0.5s 0.4s backwards;
 }
 
 .nameContainer{
+    display: inline-block;
     margin-left: 150px;
     margin-top: 100px;
     font-size: 25px;
-    color:  #7a9e6e;
+    color:  #b1d597;
 }
-
+.typeWriterName {
+    display: inline-block;
+    align-items: center;
+}
+#name {
+    display: inline-block;
+    border-right: 5px solid;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        typing 2s steps(17),
+        cursor .4s step-end infinite alternate;
+}
+/*blinking cursor*/
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+/*typing effect*/
+@keyframes typing {
+    from {width: 0}
+     to 30%{width: 17ch; }
+}
+#title {
+        animation:
+        fade-down 0.5s 0.4s backwards;
+}
 #selectionsContainer{
     display: flex;
     justify-content: space-evenly;
+       animation:
+        fade-down 0.5s 0.4s backwards;
 
 }
 
