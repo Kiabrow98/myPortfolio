@@ -238,8 +238,7 @@ border-radius: 10%;
     color: #b1d597;
     margin-top: 200px;
     margin-left: 20px;
-    font-size: 80px;
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: 40px;
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
@@ -311,7 +310,7 @@ default
 */
 
 .html {
-    width: 90%;
+    width: 85%;
     animation: html 3s;
 }
 .bar .html {
@@ -325,7 +324,7 @@ default
         width: 0%;
     }
     100% {
-        width: 90%;
+        width: 85%;
     }
 }
 
@@ -424,7 +423,6 @@ default
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    margin
 }
 
 .projectCard img {
@@ -456,3 +454,106 @@ margin-bottom: 8px;
     margin-top: 16px;
     color: #fff;
 }
+
+/*page three*/
+#pageThree {
+    margin-bottom: 100px
+}
+#gamesTitle {
+    color: #b1d597;
+    margin-top: 200px;
+    margin-left: 20px;
+    font-size: 40px;
+    /*font-size: clamp(2rem, 8vw, 5rem);*/
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.gameCarousel {
+    width: 100%;
+    overflow-x: auto;
+    margin: 3em auto;
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --gameCarousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+.gameCarousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+.gameCarouselCard::scroll-marker {
+    content: '';
+    height: 1em;
+    width: 1em;
+    background-color: #333;
+    border-color: #333;
+    border-radius: 50%;
+}
+
+.gameCarouselCard::scroll-marker:target-current {
+    background-color: var(--brand-color);
+}
+
+.gameCarousel::-webkit-scrollbar {
+    display: none;
+}
+
+.gameCarousel::scroll-button(right), .gameCarousel::scroll-button(left)  {
+    content: "→";
+    border: none;
+    background-color: var(-brand-color);
+    font-family: Consolas;
+    font-size: 3em;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --gameCarousel;
+    position-area: right center;
+    translate: -50%;
+}
+
+.gameCarousel::scroll-button(left) {
+    content: "←";
+    position-area: left center;
+    translate: 50px;
+}
+
+.gameCarousel::scroll-button(right):disabled, .gameCarousel::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+} 
+
+.gameCarouselCard {
+    flex: 0 0 20em;
+    aspect-ratio: 5 / 3;
+    background-color: var(--primary-color);
+    padding: 1em;
+    border-radius: .5em;
+    text-align: center;
+    align-items: center;
+    scroll-snap-type: start;
+
+}
+
+@media(max-width) {
+    .gameCarouselCard {
+        flex: 0, 0, 100%;
+    }
+}
+
+.gameImages {
+    max-width: fit-content;
+}
+
