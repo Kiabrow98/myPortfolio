@@ -15,6 +15,9 @@ body {
     text-align: center;
     color: #a44113;
     background-color: #fbf1d7;
+        animation:
+        fade-down 0.5s 0.4s backwards;
+        
 }
 .header {
     position: sticky;
@@ -23,6 +26,7 @@ body {
     padding-bottom: 25px;
     background-color: #FCF8F4;
     border-bottom: 3px solid #F0DFCB;
+
 }
 .selections-bar {
     display: flex;
@@ -33,7 +37,20 @@ body {
     
 }
 
-#resumeButton:hover {
+#resumeButton, 
+#aboutMeButton, 
+#projectsButton, 
+#hobbiesButton, 
+#contactMeButton {
+transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+#resumeButton:hover, 
+#aboutMeButton:hover,
+#projectsButton:hover,
+#hobbiesButton:hover,
+#contactMeButton:hover {
     transition: all 0.3s ease;
     cursor: pointer;
     font-size: 23px;
@@ -41,9 +58,17 @@ body {
     text-shadow: 0px 0px 20px black;
     text-decoration: underline;
     text-decoration-thickness: 3px;
+    box-shadow: 
+        0px 4px 8px rgba(44, 34, 23, 0.03),
+        0px 8px 16px rgba(44, 34, 23, 0.05),
+        0px 16px 24px rgba(44, 34, 23, 0.07);
     
 }
-#resumeButton:active {
+#resumeButton:active,
+#aboutMeButton:active,
+#projectsButton:active,
+#hobbiesButton:active,
+#contactMeButton:active {
     transition: all 0.3s ease;
     cursor: pointer;
     font-size: 19px;
@@ -53,7 +78,7 @@ body {
     text-decoration-thickness: 3px;
 }
 
-
+/*
 #aboutMeButton:hover {
     transition: all 0.3s ease;
     cursor: pointer;
@@ -129,6 +154,7 @@ body {
     text-decoration: underline;
     text-decoration-thickness: 3px;
 }
+*/
 
 .name-and-image {
     display: flex;
@@ -136,8 +162,32 @@ body {
     justify-content: space-evenly;
     margin-top: 50px;
     flex-wrap: wrap;
+        animation:
+        fade-down 0.5s 0.4s backwards;
 }
-
+.typeWriterName {
+    display: inline-block;
+    align-items: center;
+}
+#name {
+    display: inline-block;
+    border-right: 5px solid;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        typing 2s steps(17),
+        cursor .4s step-end infinite alternate;
+}
+/*blinking cursor*/
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+/*typing effect*/
+@keyframes typing {
+    from {width: 0}
+     to 30%{width: 17ch; }
+}
 .portfolio-image {
     display: flex;
     justify-content: center;
@@ -146,12 +196,14 @@ body {
     width: 300px;
     max-width: 400px;
     height: auto;
+
     
 }
 .social-links-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
+
 }
 
 .socials-image {
@@ -166,13 +218,41 @@ body {
   border-color: #F0DFCB;
   border-width: 2px;
   background-color: white;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .social-buttons:hover {
     cursor: pointer;
     transform: scale(1.1);
-    transition: .3s;
+    box-shadow: 
+        0px 4px 8px rgba(44, 34, 23, 0.03),
+        0px 8px 16px rgba(44, 34, 23, 0.05),
+        0px 16px 24px rgba(44, 34, 23, 0.07);
 }
+
+/*fade down animation*/
+@keyframes fade-down {
+0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+}
+
+100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+}
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 .about-me-title {
     display: inline-block;
     border: 2px solid #F0DFCB;
@@ -180,6 +260,7 @@ body {
     font-size: 18px;
     margin-left: 20px;
     padding: 10px;
+
     
 }
 
@@ -190,12 +271,14 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .stats-one {
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
+
 }
 
 .stats-two {
@@ -209,6 +292,17 @@ body {
     border-radius: 10px;
     padding: 20px;
     width: 200px;
+    background-color: #F9F2EA;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.about-me-stats:hover {
+    transform:translateY(-6px);
+    box-shadow: 
+        0px 4px 8px rgba(44, 34, 23, 0.03),
+        0px 8px 16px rgba(44, 34, 23, 0.05),
+        0px 16px 24px rgba(44, 34, 23, 0.07);
 }
 .skill-set-title{
     margin-top: 50px;
@@ -227,6 +321,16 @@ body {
     padding: 20px;
     width: 200px;
     text-align: center;
+    background-color: #fbf1d7;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-set-stats:hover {
+    transform:translateY(-6px);
+    box-shadow: 
+        0px 4px 8px rgba(44, 34, 23, 0.03),
+        0px 8px 16px rgba(44, 34, 23, 0.05),
+        0px 16px 24px rgba(44, 34, 23, 0.07);
 }
 
 .skills-one {
@@ -393,8 +497,163 @@ margin-bottom: 8px;
     margin-top: 50px;
     flex-wrap: wrap; 
 }
+.color-container {
+    background: linear-gradient(to bottom, #D9C5B1, #F0DFCB, );
+    min-height: 100vh; 
+}
 
-.darker-shade{
+.hobbies-picture {
+    width: 120x;
+    height: 120px;
+    object-fit: cover;   
+}
+
+
+.hobbies-carousel {
+    width: 100%;
+    overflow-x: auto;
+    margin: 3em auto;
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --gameCarousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+.hobbies-carousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+.hobbies-carousel-card::scroll-marker {
+    content: '';
+    height: 1em;
+    width: 1em;
+    background-color: #333;
+    border-color: #333;
+    border-radius: 50%;
+}
+
+.hobbies-carousel-card::scroll-marker:target-current {
+    background-color: var(--brand-color);
+}
+
+.hobbies-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.hobbies-carousel::scroll-button(right), .hobbies-carousel::scroll-button(left)  {
+    content: "→";
+    border: none;
+    background-color: var(-brand-color);
+    font-family: Consolas;
+    font-size: 3em;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --hobbies-carousel;
+    position-area: right center;
+    translate: -50%;
+}
+
+.hobbies-carousel::scroll-button(left) {
+    content: "←";
+    position-area: left center;
+    translate: 50px;
+}
+
+.hobbies-carousel::scroll-button(right):disabled, .hobbies-carousel::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+} 
+
+.hobbies-carousel-card {
+    flex: 0 0 20em;
+    aspect-ratio: 5 / 3;
+    background-color: var(--primary-color);
+    padding: 1em;
+    border-radius: .5em;
+    text-align: center;
+    align-items: center;
+    scroll-snap-type: start;
+    
+
+}
+
+@media(max-width) {
+    .hobbies-carousel-card {
+        flex: 0, 0, 100%;
+    }
+}
+
+.hobbies-images {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.hobbies-images:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.gameImages:active { 
+
+}
+.gameCarouselCard p {
+    color: #b1d597;
+}
+
+
+.carousel {
+    margin: 100px auto;
+    width: 90%;
+   /* border: 5px solid red;*/
+    display: flex;
+    overflow-x: auto;
+    height: 100px;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 10s infinite linear;
+    padding-right: 1em;
+}
+.card {
+    flex: 0 0 5em;
+    height: 1em;
+    padding: 1em;
+    font-size: 1rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+#carouselImages{
+  width: 500px;
+  height: 250px;
+  object-fit: contain;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+
+}
+
+/*.darker-shade{
     background-color: #D9C5B1;
 }
 .lighter-shade {

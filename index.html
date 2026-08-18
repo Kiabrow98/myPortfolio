@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!--New Portfolio Layou Code-->
+<!--New Portfolio Layout Code-->
+<div class="color-container">
 <div class="header">
 <div id="selections-bar" class="selections-bar">
     <div id="resumeButton" class="selection-button">Resume</div>
@@ -27,7 +28,9 @@
     <img src="/images/28746081-F2EC-45BF-9EA5-957425B53F05_4_5005_c.jpeg" alt="picture of me smiling in Italy">
 </div>
 <div id="name-title" class="name-and-title"> 
- <h1>Hi, Im Kia </h1>
+    <div class="typeWriterName">
+ <h1 id="name">Hi, Im Kia </h1>
+ </div>
  <h2>Web Developer/ Frontend Developer/ Software Engineer</h2>
 
  <p>I turn ideas into clean, functional web experiences — 
@@ -113,14 +116,23 @@
 </div>
         <div id="frameworks-libraries" class="frameworks-libraries">
             <h3>Frameworks & Libraries</h3>
+            <h3>In Progress</h3>
         <div class="frameworks-libraries-container">
-            <div class="frameworks-stats"><p>React - in progress</p></div>
+                <div class="carousel">
+        <div class="group">
+            <div class="card"><img id="carouselImages"  src="/logos/react-logo.png" alt=""></div>
+            <div class="card"><img id="carouselImages"  src="/logos/node.js.jpg" alt=""></div>
+            <div class="card"><img id="carouselImages"  src="/logos/git-github-logo.jpg"></div>
+            <div class="card"><img id="carouselImages"  src="/logos/TypeScript-logo.png"></div>
+            <div class="card"><img id="carouselImages"  src="/logos/tailwind-css.png"></div>
+            <div class="card"><img id="carouselImages"  src="/logos/angular-logo.png"></div>
+           <!-- <div class="frameworks-stats"><p>React - in progress</p></div>
             <div class="frameworks-stats"><p>Node.js - in progress</p></div>
             <div class="frameworks-stats"><p>Git & GitHub - in progress</p></div>
-            <div class="frameworks-stats"><p>TypeScript - in progress</p></div>
+            <div class="frameworks-stats"><p>TypeScript - in progress</p></div> -->
         </div>    
         </div>
-
+        </div>
 </div>
 <div id="projects" class="projects"></div>
 <h3 class="projects-title">Projects</h3>
@@ -150,27 +162,27 @@
 <h3 class="outside-of-code-title">Outside of Code</h3>
 <p class="outside-code-paragraph">A few hobbies that keep me inspired, relaxed, and curious</p>
 <div class="hobbies-stats-container">
-<div class="hobbies-one">
-     <div class="hobbies-stats">
-        <h3>Switch Games</h3>
-        <p>A game that has 120 hours or more played on my switch is Cult of the Lamb.</p>
-    </div>
-    <div class="hobbies-stats">
-        <h3>Skating</h3>
-        <p>I rollerskate throughout the week at the local rinks around Dallas.</p>
-    </div>
+<div id="hobbies-cards" class="hobbies-carousel">
+            <div class="hobbies-carousel-card">
+                <img class="hobbies-images"  src="/images/cult-of-the-lamb.jpg" alt="picture of cult of the lamb">
+                <h3>Switch Games</h3>
+            <p>Played for 120 hours or more of Cult of the Lamb</p></div>
+            <div class="hobbies-carousel-card">
+                <img class="hobbies-images" src="/game images/AF5C4D2F-7D00-4DB8-8CEB-37A990626592.png" alt="Palia">
+                <h3>Rollerskating</h3>
+            <p>I rollerskate throughout the week at the local rinks around Dallas.</p></div>
+            <div class="hobbies-carousel-card">
+                <img class="hobbies-images" src="/images/69CE0A58-264E-41F6-B11D-6C5C302ED1B7_1_105_c.jpeg"  alt="a picture of me in Rome">
+            <p>I currently have 4 World Wonders under my belt.</p></div>
+            <div class="hobbies-carousel-card">
+                <img class="hobbies-images" src="/images/demon-slayer.jpg" alt="picture of Demon Slayer">
+            <p>Currently on my 10th rewatch of Demon Slayer</p></div>
+        </div>
 </div>
-    <div class="hobbies-two"> 
-        <div class="hobbies-stats">
-        <h3>Traveling</h3>
-        <p>I currently have 4 World Wonders under my belt.</p>
-    </div>
-    <div class="hobbies-stats">
-        <h3>Anime</h3>
-        <p>Currently on my 10th rewatch of Demon Slayer</p></div>
-</div>
-</div>
+
+
 <p class="footer">© 2026 Kia Brown. Built with HTML, CSS, & JavaScript.</p>
+</div>
 </div>
 </body>
 </html>
