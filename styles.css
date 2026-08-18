@@ -33,6 +33,9 @@ body {
     justify-content: space-evenly;
     font-family: 'Bitcount Single';
     font-size: 15px;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
     
     
 }
@@ -85,8 +88,11 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     justify-content: space-evenly;
     margin-top: 50px;
     flex-wrap: wrap;
-        animation:
+    animation:
         fade-down 0.5s 0.4s backwards;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 .typeWriterName {
     display: inline-block;
@@ -101,6 +107,7 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     animation:
         typing 2s steps(17),
         cursor .4s step-end infinite alternate;
+        
 }
 /*blinking cursor*/
 @keyframes cursor {
@@ -119,9 +126,18 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     width: 300px;
     max-width: 400px;
     height: auto;
-
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
     
 }
+
+.first-paragraph {
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
 .social-links-buttons {
     display: flex;
     justify-content: center;
@@ -142,6 +158,9 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
   border-width: 2px;
   background-color: white;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
 }
 
 .social-buttons:hover {
@@ -183,6 +202,9 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     font-size: 18px;
     margin-left: 20px;
     padding: 10px;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 
     
 }
@@ -194,6 +216,9 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 
 }
 
@@ -217,6 +242,9 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     width: 200px;
     background-color: #F9F2EA;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 
 }
 
@@ -240,6 +268,9 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     font-size: 18px;
     margin-left: 20px;
     padding: 10px;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
     
 }
 .skill-set-stats {
@@ -296,6 +327,9 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
 .frameworks-libraries-container {
     display: flex;
     align-items: center;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 .frameworks-stats {
     display: inline-block;
@@ -317,6 +351,9 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     font-size: 18px;
     margin-left: 20px;
     padding: 10px;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 
@@ -327,6 +364,9 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 /*project cards css */
 #projectCardsContainer {
@@ -383,6 +423,9 @@ margin-bottom: 8px;
     font-size: 18px;
     margin-left: 20px;
     padding: 10px;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 .outside-code-paragraph {
     font-size: 20px;
@@ -391,6 +434,9 @@ margin-bottom: 8px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .hobbies-one {
