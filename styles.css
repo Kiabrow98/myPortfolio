@@ -298,30 +298,7 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
         0px 16px 24px rgba(44, 34, 23, 0.07);
 }
 
-.skills-one {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    
-}
 
-.skills-two {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-}
-
-.skills-three {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-}
-
-.skills-logos {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-}
 
 .frameworks-libraries {
     margin-top: 40px;
@@ -390,6 +367,10 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.projectCard:hover {
+     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .projectCard img {
@@ -471,12 +452,6 @@ margin-bottom: 8px;
     justify-content: center;
 }
 
-.stats-one, .stats-two, .skills-one, .skills-two, .skills-three, .hobbies-one, .hobbies-two {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    flex-wrap: wrap; 
-}
 .color-container {
     background: linear-gradient(to bottom, #D9C5B1, #F0DFCB, );
     min-height: 100vh; 
@@ -496,7 +471,7 @@ margin-bottom: 8px;
     display: flex;
     gap: 1em;
     scroll-behavior: smooth;
-    anchor-name: --gameCarousel;
+    anchor-name: --hobbies-carousel;
     scroll-snap-type: x mandatory;
     scroll-marker-group: after;
     animation: appear 5s linear;
@@ -528,7 +503,7 @@ margin-bottom: 8px;
 .hobbies-carousel::scroll-button(right), .hobbies-carousel::scroll-button(left)  {
     content: "→";
     border: none;
-    background-color: var(-brand-color);
+    background-color: var(--brand-color);
     font-family: Consolas;
     font-size: 3em;
     color: white;
@@ -582,56 +557,6 @@ margin-bottom: 8px;
 .hobbies-images:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
-.gameImages:active { 
-
-}
-.gameCarouselCard p {
-    color: #b1d597;
-}
-
-
-.carousel {
-    margin: 100px auto;
-    width: 90%;
-    border: 5px solid red;
-    display: flex;
-    overflow-x: auto;
-    height: 100px;
-}
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    animation: spin 10s infinite linear;
-    padding-right: 1em;
-}
-.card {
-    flex: 0 0 5em;
-    height: 1em;
-    padding: 1em;
-    font-size: 1rem;
-    border-radius: .2em;
-    text-align: center;
-    align-content: center;
-}
-#carouselImages{
-  width: 500px;
-  height: 250px;
-  object-fit: contain;
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-@keyframes spin {
-    from {translate: 0;}
-    to {translate: -100%;}
-
-}
 
 .skillsBar {
     margin-left: 50px;
@@ -647,6 +572,11 @@ margin-bottom: 8px;
     animation-range: entry 0 cover 40%;
 
 }
+
+#proficiencyBar:hover {
+     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
 .skillsBar h3 {
     font-size: 16px;
 }
@@ -784,6 +714,9 @@ margin-bottom: 8px;
   border-radius:18px;
   padding:32px;
   box-shadow:0 10px 30px rgba(107, 66, 38, 0.10);
+}
+.frameworks-panel:hover {
+     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .frameworks-panel-head{
