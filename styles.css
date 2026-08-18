@@ -78,83 +78,6 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     text-decoration-thickness: 3px;
 }
 
-/*
-#aboutMeButton:hover {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 23px;
-    transition: .7s;
-    text-shadow: 0px 0px 20px black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-
-#aboutMeButton:active {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 19px;
-    transition: .5s;
-    text-shadow: 0px 0px 20px black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-
-#projectsButton:hover {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 23px;
-    transition: .7s;
-    text-shadow: 0px 0px 20px black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    
-}
-#projectsButton:active {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 19px;
-    transition: .5s;
-    text-shadow: 0px 0px 20px black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-#hobbiesButton:hover {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 23px;
-    transition: .7s;
-    text-shadow: 0px 0px 20px black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-#hobbiesButton:active {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 19px;
-    transition: .5s;
-    text-shadow: 0px 0px 20px black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-#contactMeButton:hover {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 23px;
-    transition: .7s;
-    text-shadow: 0px 0px 20px black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-#contactMeButton:active {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-size: 19px;
-    transition: .5s;
-    text-shadow: 0px 0px 20px black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-*/
 
 .name-and-image {
     display: flex;
@@ -303,6 +226,11 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
         0px 4px 8px rgba(44, 34, 23, 0.03),
         0px 8px 16px rgba(44, 34, 23, 0.05),
         0px 16px 24px rgba(44, 34, 23, 0.07);
+}
+
+.skill-flex {
+    display: flex;
+    justify-content: center;
 }
 .skill-set-title{
     margin-top: 50px;
@@ -613,7 +541,7 @@ margin-bottom: 8px;
 .carousel {
     margin: 100px auto;
     width: 90%;
-   /* border: 5px solid red;*/
+    border: 5px solid red;
     display: flex;
     overflow-x: auto;
     height: 100px;
@@ -651,6 +579,233 @@ margin-bottom: 8px;
     from {translate: 0;}
     to {translate: -100%;}
 
+}
+
+.skillsBar {
+    margin-left: 50px;
+    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    color: #a44113;
+    padding: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+
+}
+.skillsBar h3 {
+    font-size: 16px;
+}
+
+.skillsBar li {
+    margin: 20px 0;
+    padding: 10px; 
+}
+
+.bar {
+    background: #fbf1d7;
+    display: block;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.bar:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
+    
+}
+
+
+.html {
+    width: 85%;
+    animation: html 3s;
+}
+.bar .html {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(228, 77, 38, 1) 0%, rgba(241, 101, 41, 1) 100%);
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+.css {
+    width: 80%;
+    animation: css 3s;
+}
+.bar .css {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(38, 77, 228, 1) 0%, rgba(125, 178, 255, 1) 100%); 
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+.javascript {
+    width: 65%;
+    animation: javascript 3s;
+}
+
+.bar .javascript {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(247, 223, 30, 1) 0%, rgba(255, 245, 157, 1) 100%); 
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+.java {
+    width: 60%;
+    animation: java 3s;
+}
+
+.bar .java {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(176, 36, 26, 1) 0%, rgba(240, 173, 78, 1) 100%); 
+}
+
+@keyframes java{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+.cplusplus {
+    width: 50%;
+    animation: cplusplus 3s;
+}
+
+.bar .cplusplus {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(0, 89, 156, 1) 0%, rgba(0, 153, 216, 1) 100%); 
+}
+
+@keyframes cplusplus {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.frameworks-panel{
+  background: #F0DFCB;
+  border:1px solid #F0DFCB;
+  border-radius:18px;
+  padding:32px;
+  box-shadow:0 10px 30px rgba(107, 66, 38, 0.10);
+}
+
+.frameworks-panel-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.frameworks-panel-head h4{ font-size:17px; }
+
+/* the "Currently loading new skills" pill with the pulsing dot */
+.loading-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:12.5px;
+  font-weight:600;
+  color:#C6541F;
+  background:rgba(226,112,58,0.10);
+  padding:6px 12px;
+  border-radius:999px;
+}
+.loading-pill .pulse{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#E2703A;
+  animation:pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ opacity:1; transform:scale(1); }
+  50%{ opacity:.4; transform:scale(1.5); }
+}
+
+/* the row of chips */
+.fw-track{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.fw-chip{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#FFF1E2;
+  border:1px solid #F0DFCB;
+  padding:9px 16px;
+  border-radius:999px;
+  font-size:13.5px;
+  font-weight:500;
+  color:#8A6652;
+  position:relative;
+  overflow:hidden;
+}
+.fw-chip strong{
+  color:#3B2A20;
+  position:relative;
+  z-index:1;
+}
+
+/* the moving highlight sweeping across each chip */
+.fw-chip::after{
+  content:'';
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:40%;
+  background:linear-gradient(90deg, rgba(226,112,58,0.18), transparent);
+  animation:load-sweep 2.2s ease-in-out infinite;
+}
+@keyframes load-sweep{
+  0%{ left:-40%; }
+  100%{ left:100%; }
 }
 
 /*.darker-shade{
@@ -965,14 +1120,14 @@ border-radius: 10%;
 }
 
 
-/*.bar span {
+.bar span {
 default
     height: 20px;
     float: left;
     background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
     
 }
-*/
+
 
 /*.html {
     width: 85%;
