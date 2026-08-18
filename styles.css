@@ -33,9 +33,6 @@ body {
     justify-content: space-evenly;
     font-family: 'Bitcount Single';
     font-size: 15px;
-    animation: appear 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
     
     
 }
@@ -80,11 +77,20 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     text-decoration: underline;
     text-decoration-thickness: 3px;
 }
-
-
+#dateTime {
+    font-family: 'Bitcount Single';
+}
+.info-image {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.personal-info {
+    font-weight: bold;
+}
 .name-and-image {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-evenly;
     margin-top: 50px;
     flex-wrap: wrap;
@@ -122,10 +128,10 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
     display: flex;
     justify-content: center;
     clip-path: circle(40%);
-    shape-outside: circle(45%);
-    width: 300px;
-    max-width: 400px;
-    height: auto;
+    width: 50px;
+    max-width: 100px;
+    height: 250px;
+    flex-shrink: 0;
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
@@ -197,7 +203,7 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
 
 .about-me-title {
     display: inline-block;
-    border: 2px solid #F0DFCB;
+    border: 2px solid #a44113;
     border-radius: 50px;
     font-size: 18px;
     margin-left: 20px;
@@ -263,7 +269,7 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
 .skill-set-title{
     margin-top: 50px;
     display: inline-block;
-    border: 2px solid #F0DFCB;
+    border: 2px solid #a44113;
     border-radius: 50px;
     font-size: 18px;
     margin-left: 20px;
@@ -346,7 +352,7 @@ transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-
 .projects-title {
     margin-top: 50px;
     display: inline-block;
-    border: 2px solid #F0DFCB;
+    border: 2px solid #a44113;
     border-radius: 50px;
     font-size: 18px;
     margin-left: 20px;
@@ -418,7 +424,7 @@ margin-bottom: 8px;
 .outside-of-code-title {
     margin-top: 50px;
     display: inline-block;
-    border: 2px solid #F0DFCB;
+    border: 2px solid #a44113;
     border-radius: 50px;
     font-size: 18px;
     margin-left: 20px;
@@ -773,7 +779,7 @@ margin-bottom: 8px;
 }
 
 .frameworks-panel{
-  background: #F0DFCB;
+  background: #a44113;
   border:1px solid #F0DFCB;
   border-radius:18px;
   padding:32px;
@@ -798,7 +804,7 @@ margin-bottom: 8px;
   font-size:12.5px;
   font-weight:600;
   color:#C6541F;
-  background:rgba(226,112,58,0.10);
+  background:#F0DFCB;
   padding:6px 12px;
   border-radius:999px;
 }
